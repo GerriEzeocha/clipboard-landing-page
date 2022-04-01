@@ -12,10 +12,20 @@ html {
     font-size: remUnit(18);
     overflow-x: none;
     scroll-behavior: smooth;
+    min-width: remUnit(375);
 }
 
 body {
     height: 100vh;
+    background-image: url(/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: remUnit(30);
+
+    @include breakpoints(laptop){
+        background-image: url(/images/bg-header-desktop.png);
+    }
 }
 
 h1, h2, h3, h4 {

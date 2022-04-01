@@ -1,0 +1,24 @@
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: remUnit(30) remUnit(3);
+
+    &_logo {
+        margin-bottom: remUnit(20)
+    }
+
+    h1, p{
+        text-align: center;
+        line-height: (1.5);
+    }
+    h1 {
+     margin: remUnit(15);
+     padding: remUnit(10);
+    }
+
+    p {
+        margin-bottom: remUnit(30);
+    }
+}

@@ -15,10 +15,22 @@ html {
   font-size: 1.125rem;
   overflow-x: none;
   scroll-behavior: smooth;
+  min-width: 23.4375rem;
 }
 
 body {
   height: 100vh;
+  background-image: url(/images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding: 1.875rem;
+}
+
+@media (min-width: 830px) {
+  body {
+    background-image: url(/images/bg-header-desktop.png);
+  }
 }
 
 h1, h2, h3, h4 {
@@ -27,5 +39,40 @@ h1, h2, h3, h4 {
 
 p {
   color: #9fabb2;
+}
+
+.heroSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1.875rem 0.1875rem;
+}
+
+.heroSection_logo {
+  margin-bottom: 1.25rem;
+}
+
+.heroSection h1, .heroSection p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.heroSection h1 {
+  margin: 0.9375rem;
+  padding: 0.625rem;
+}
+
+.heroSection p {
+  margin-bottom: 1.875rem;
 }
 /*# sourceMappingURL=style.css.map */
