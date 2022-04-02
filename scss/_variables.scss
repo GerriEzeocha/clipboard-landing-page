@@ -6,6 +6,7 @@ $lightBlue: hsl(233, 100%, 69%);
 //  Neutral colors
 $darkGrayishBlue: hsl(210, 10%, 33%);
 $grayishBlue: hsl(201, 11%, 66%);
+$veryLightBlue: hsla(208, 62%, 96%, 0.766);
 
 @function remUnit($unit) {
     @return #{$unit / 16}rem;
