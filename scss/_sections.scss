@@ -34,20 +34,41 @@ h1, h2, h3, h4, p {
     justify-content: center;
     margin: remUnit(30) remUnit(3);
 
+    @include breakpoints(tablet){
+        p {
+            max-width: 80%;
+        }
+    }
+
+    @include breakpoints(laptop) {
+        h1 {
+            max-width: remUnit(440)
+        }
+        
+        p {
+            max-width: remUnit(590);
+        }
+    }
+
     &_logo {
         margin-bottom: remUnit(20)
     }
-
-    // h1, p{
-    //     text-align: center;
-    //     line-height: (1.5);
-    // }
 
     &_buttons {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
+
+        @include breakpoints(tablet) {
+            flex-direction: row;
+            max-width: 70%;
+            gap: remUnit(15);
+        }
+
+        @include breakpoints(laptop) {
+            max-width: remUnit(520)
+        }
 
         &_ios{
             background-color: $strongCyan;
@@ -72,15 +93,57 @@ h1, h2, h3, h4, p {
 .trackSection {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    @include breakpoints(tablet) {
+        
+    }
+
+    &_text {
+        @include breakpoints(tablet) {
+            max-width: 85%;
+        }
+        @include breakpoints(laptop) {
+            max-width: remUnit(630)
+        }
+    }
 
     &_features {
+        @include breakpoints(laptop) {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
         
         &_image{
             margin-top: remUnit(10);
             margin-bottom: remUnit(40);
 
+            @include breakpoints(laptop) {
+                position: relative;
+                left: remUnit(-54);
+                max-width: remUnit(540);
+            }
+
             img {
                 width: 100%;
+            }
+        }
+
+        &_list{
+            @include breakpoints(laptop) {
+                font-size: remUnit(15);
+                align-self: flex-start;
+            }
+            &_item{
+                @include breakpoints(laptop) {
+                    max-width: remUnit(332);
+
+                    h3, p{
+                        text-align: left;
+                    }
+
+                }
             }
         }
     }
@@ -88,6 +151,20 @@ h1, h2, h3, h4, p {
 
 .accessSection {
     margin-top: remUnit(80);
+    @include breakpoints(laptop) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    &_text{
+        @include breakpoints(laptop) {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: remUnit(630);
+        }
+    }
 
     &_image {
         img {
@@ -98,7 +175,16 @@ h1, h2, h3, h4, p {
 
 .superchargeSection {
     &_features{
+        @include breakpoints(laptop) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: remUnit(15);
+        }
         &_item {
+            @include breakpoints(laptop) {
+                max-width: remUnit(360)
+            }
             &_image{
                 display: flex;
                 align-items: center;
@@ -117,6 +203,11 @@ h1, h2, h3, h4, p {
     margin-top: remUnit(70);
     margin-bottom: remUnit(100);
 
+    @include breakpoints(laptop) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
     &_logo {
         margin: remUnit(30) 0;
     }
@@ -124,6 +215,19 @@ h1, h2, h3, h4, p {
 
 .clipBoardSection {
     margin-bottom: remUnit(120);
+
+    @include breakpoints(tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include breakpoints(laptop) {
+        p {
+            max-width: remUnit(630);
+        }
+    }
+
 }
 
 .footerSection {
@@ -132,6 +236,11 @@ h1, h2, h3, h4, p {
     align-items: center;
     background-color: $veryLightBlue;
     padding: remUnit(20);
+
+    @include breakpoints(laptop){
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
     &_logo {
         display: flex;
@@ -148,6 +257,14 @@ h1, h2, h3, h4, p {
         flex-direction: column;
         text-align: center;
         margin: remUnit(30) 0;
+
+        @include breakpoints(laptop) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(remUnit(80), remUnit(210)));
+            // grid-template-columns: repeat(3, remUnit(210));
+            width: 50%;
+            text-align: left;
+        }
 
         a{
             color: $darkGrayishBlue;
@@ -167,6 +284,10 @@ h1, h2, h3, h4, p {
         align-items: center;
         justify-content: space-evenly;
         cursor: pointer;
+
+        @include breakpoints(laptop) {
+            width: 15%;
+        }
 
         img{
             &:hover {

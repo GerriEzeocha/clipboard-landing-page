@@ -13,6 +13,7 @@ html {
     overflow-x: none;
     scroll-behavior: smooth;
     min-width: remUnit(375);
+    max-width: remUnit(1440);
 }
 
 body {
@@ -25,6 +26,8 @@ body {
     @include breakpoints(laptop){
         background-image: url(/images/bg-header-desktop.png);
     }
+
+
 }
 
 main {
@@ -37,4 +40,5 @@ h1, h2, h3, h4 {
 
 p {
     color: $grayishBlue;
+
 }
